@@ -24,7 +24,7 @@ class ColorsView(APIView):
 
 class ColorView(APIView):
   def delete(self, request, pk):
-    color = get_object_or_404(Color, pk=pk):
+    color = get_object_or_404(Color, pk=pk)
     if request.user != color.owner:
       raise PermissionDenied("These are not the colors you're looking for.")
     color.delete()
