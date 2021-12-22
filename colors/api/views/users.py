@@ -8,7 +8,6 @@ class SignUp(generics.CreateAPIView):
     authentication_classes = ()
     permission_classes = ()
     
-    
     def post(self, request):
         created_user = UserSerializer(data=request.data['user'])
         if created_user.is_valid():
