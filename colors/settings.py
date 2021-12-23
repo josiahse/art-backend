@@ -10,7 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 import os
-import django_on_heroku
+
 from pathlib import Path
 from dotenv import load_dotenv
 load_dotenv()
@@ -141,4 +141,5 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+import django_on_heroku
 django_on_heroku.settings(locals())
