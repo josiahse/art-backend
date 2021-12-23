@@ -1,0 +1,2 @@
+web: gunicorn colors.wsgi
+release: python manage.py migrate
